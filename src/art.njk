@@ -1,0 +1,13 @@
+---
+title: Art by Victoria Kuc
+bodyClass: art
+---
+<h2>Art</h2>
+
+<ul class="listing listing--work listing--work--art">
+{% for item in collections.art %}
+    <li>
+        {% include "work.njk"  %}
+    </li>
+{% endfor %}
+</ul>

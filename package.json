@@ -1,0 +1,68 @@
+{
+  "name": "victoriakuc.co.uk",
+  "version": "1.0.0",
+  "description": "Website for victoriakuc.co.uk",
+  "homepage": "https://www.victoriakuc.co.uk",
+  "private": true,
+  "scripts": {
+    "start": "npm run serve & npm run development -- --watch",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "serve": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
+    "build": "npm run production && npx @11ty/eleventy",
+    "test": "",
+    "lint": "npm run lint:js",
+    "lint:js": "npx standard  --fix",
+    "release": "standard-version --tag-prefix="
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trovster/victoriakuc.co.uk.git"
+  },
+  "author": {
+    "name": "Trevor Morris",
+    "email": "code@trovster.com",
+    "url": "https://www.trovster.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "cross-env": "^7.0.2",
+    "husky": "^3.0.9",
+    "laravel-mix": "^5.0.4",
+    "lint-staged": "^9.4.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.2",
+    "standard": "^14.3.3",
+    "standard-version": "^7.1.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "lint-staged": {
+    "*.(vue|js)": [
+      "npm run lint:js",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "standard": {
+    "global": []
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": true
+    }
+  }
+}

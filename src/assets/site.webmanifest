@@ -1,0 +1,14 @@
+{
+  "name": "Victoria Kuc",
+  "short_name": "Victoria Kuc",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#4c4755",
+  "background_color": "#4c4755",
+  "display": "standalone"
+}
