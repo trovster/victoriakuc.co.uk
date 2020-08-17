@@ -1,0 +1,18 @@
+---
+layout: default.njk
+---
+<h2 class="work__title">{{ title }}</h2>
+
+<div class="work">
+    <div class="work__image">
+        <img src="{{ image | imagePath(page) | url | absoluteUrl(site.baseUrl) }}" alt="" title="" />
+    </div>
+    <div class="work__detail">
+        <p class="work__medium">{{ medium }}</p>
+        <p class="work__description">{{ content | striptags }}</p>
+    </div>
+</div>
+
+<nav class="pagination">
+    <a href="{{ back | url | absoluteUrl(site.baseUrl) }}" class="pagination--prev">Back</a>
+</nav>

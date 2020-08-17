@@ -343,9 +343,9 @@ footer {
 
 .work {
   position: relative;
-  overflow: hidden;
   margin: 0;
   padding: 0 0 20px;
+  min-height: 200px;
   border: 0 solid $primary;
 
   &.work--for-sale,

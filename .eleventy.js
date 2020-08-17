@@ -3,10 +3,13 @@ const absoluteUrl = require('./src/_filters/absoluteUrl')
 const byKey = require('./src/_filters/byKey')
 const bySlug = require('./src/_filters/bySlug')
 const folder = require('./src/_filters/folder')
-const image = require('./src/_filters/image')
+const imagePath = require('./src/_filters/imagePath')
 
 module.exports = function (config) {
-  config.setTemplateFormats([ 'md', 'njk', 'jpg' ]);
+  config.setTemplateFormats([ 'md', 'njk', 'jpg' ])
+
+  config.addLayoutAlias('item', 'item.njk')
+
   config.addPassthroughCopy({
     'src/assets/img': 'img/',
     'src/assets/apple-touch-icon.png': 'apple-touch-icon.png',
@@ -24,7 +27,7 @@ module.exports = function (config) {
   config.addFilter('absoluteUrl', (href, base) => absoluteUrl(href, base))
 
   config.addFilter('folder', (page) => folder(page))
-  config.addFilter('image', (page) => image(page, config))
+  config.addFilter('imagePath', (image, page) => imagePath(image, page))
 
   config.addFilter('byKey', (collection, key) => byKey(collection, key))
 
