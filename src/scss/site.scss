@@ -112,6 +112,10 @@ nav {
     border: 0 solid lighten($primary, 15%);
     background: transparent none;
 
+    li {
+      display: inline-block;
+    }
+
     a {
       font-family: $fontAlt;
       text-decoration: none;
@@ -120,7 +124,7 @@ nav {
     .pagination--more {
       float: right;
     }
-    .pagination--back {
+    .pagination--prev {
       float: left;
     }
   }

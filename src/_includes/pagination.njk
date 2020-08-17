@@ -1,0 +1,14 @@
+<nav class="pagination">
+    <ol class="listing">
+        {% if pagination.href.previous %}
+        <li class="pagination--prev">
+            <a href="{{ pagination.href.previous }}">Previous</a>
+        </li>
+        {% endif %}
+        {% if pagination.href.next %}
+        <li class="pagination--more">
+            <a href="{{ pagination.href.next }}">Next</a>
+        </li>
+        {% endif %}
+    </ol>
+</nav>
