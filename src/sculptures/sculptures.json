@@ -1,0 +1,8 @@
+{
+    "layout": "item",
+    "type": "Sculpture",
+    "permalink": "{{ page | folder }}/index.html",
+    "bodyClass": "work sculpture",
+    "back": "/sculpture",
+    "image": false
+}

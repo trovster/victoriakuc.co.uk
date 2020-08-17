@@ -1,6 +1,6 @@
 <div class="work">
     <div class="work__image">
-        <img src="{{ item.data | image | url | absoluteUrl(site.baseUrl) }}" alt="" title="" />
+        <img src="{{ item.data.image | imagePath(item.data.page) | url | absoluteUrl(site.baseUrl) }}" alt="" title="" />
     </div>
     <div class="work__detail">
         <h3 class="work__title">{{ item.data.title }}</h3>
