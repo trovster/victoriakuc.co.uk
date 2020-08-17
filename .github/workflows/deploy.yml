@@ -1,6 +1,6 @@
 name: Build and Deploy
 env:
-  GITHUB_URL: https://trovster.github.io
+  GITHUB_URL: https://trovster.github.io/victoriakuc.co.uk/
 on:
   push:
     branches: [ main ]
