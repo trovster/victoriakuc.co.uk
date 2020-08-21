@@ -1,0 +1,123 @@
+site_url: "https://www.victoriakuc.co.uk"
+publish_mode: editorial_workflow
+media_folder: "src/images"
+public_folder: "/images"
+show_preview_links: false
+logo_url: /img/victoria-kuc-vk.gif
+
+backend:
+  name: git-gateway
+  branch: master
+
+local_backend:
+  url: http://localhost:8082/api/v1
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - name: "index"
+        label: "Homepage"
+        file: "src/index.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Art Title", name: "art", widget: "string"}
+          - {label: "Sculpture Title", name: "sculpture", widget: "string"}
+      - name: "art"
+        label: "Art"
+        file: "src/art.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Section", name: "section", widget: "string"}
+      - name: "sculpture"
+        label: "Sculpture"
+        file: "src/sculpture.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Section", name: "section", widget: "string"}
+      - name: "about"
+        label: "About"
+        file: "src/about.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Avatar", name: "avatar", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "art"
+    label: "Art"
+    folder: "src/art"
+    slug: "art/{{slug}}"
+    preview_path: "art/{{slug}}"
+    create: true
+    delete: true
+    editor:
+      preview: false
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/default.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Medium", name: "medium", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Sold", name: "sold", widget: "boolean"}
+      - {label: "For Sale", name: "for_sale", widget: "boolean"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "sculptures"
+    label: "Sculptures"
+    folder: "src/sculptures"
+    slug: "sculpture/{{slug}}"
+    preview_path: "sculpture/{{slug}}"
+    create: true
+    delete: true
+    editor:
+      preview: false
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Medium", name: "medium", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Sold", name: "sold", widget: "boolean"}
+      - {label: "For Sale", name: "for_sale", widget: "boolean"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - label: "Configuration"
+    name: "config"
+    editor:
+      preview: false
+    files:
+      # - label: "Site Data"
+      #   name: "site_data"
+      #   file: "src/_data/site.js"
+      #   delete: false
+      #   fields:
+      #     - {label: "Title", name: "title", widget: "string"}
+      #     - {label: "Summary", name: "summary", widget: "string"}
+      #     - {label: "Author", name: "author", widget: "string"}
+      #     - {label: "URL", name: "url", widget: "string"}
+      #     - {label: "Email", name: "email", widget: "string"}
+      #     - {label: "Telephone", name: "telephone", widget: "string"}
+
+      - label: "Social Media"
+        name: "social_media"
+        file: "src/_data/social.json"
+        delete: false
+        fields:
+          - {label: "Facebook", name: "facebook", widget: "string", required: false}
+          - {label: "Twitter", name: "twitter", widget: "string", required: false}
+          - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - {label: "Etsy", name: "etsy", widget: "string", required: false}

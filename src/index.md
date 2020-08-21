@@ -5,4 +5,3 @@ layout: index
 art: Art
 sculpture: Sculpture
 ---
-
