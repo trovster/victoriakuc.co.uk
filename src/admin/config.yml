@@ -67,7 +67,9 @@ collections:
     delete: true
     editor:
       preview: false
+    sortableFields: ["order", "title", "date"]
     fields:
+      - {label: "Order", name: "order", widget: "number"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Medium", name: "medium", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
@@ -84,7 +86,9 @@ collections:
     delete: true
     editor:
       preview: false
+    sortableFields: ["order", "title", "date"]
     fields:
+      - {label: "Order", name: "order", widget: "number"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Medium", name: "medium", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
