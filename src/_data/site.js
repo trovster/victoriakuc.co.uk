@@ -5,7 +5,7 @@ const site = {
   url: 'https://www.victoriakuc.co.uk',
   baseUrl: '/',
   email: 'victoria.kuc@hotmail.com',
-  // telephone: '07884 182 178',
+  telephone: '07706 234409',
   address: {
     street: '21 Little Tixall Lane',
     locality: 'Great Haywood',
