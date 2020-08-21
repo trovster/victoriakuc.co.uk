@@ -1,4 +1,5 @@
 module.exports = {
+  facebook: '',
   twitter: 'https://twitter.com/victoriakuc',
   instagram: 'https://www.instagram.com/toriakuc/',
   etsy: 'https://www.etsy.com/ca/shop/VKucSculptures'
