@@ -15,3 +15,7 @@ layout: default.njk
         </a>
     </div>
 </div>
+
+<p>Base URL: {{ site.baseUrl }}</p>
+<p>Through URL: {{ site.baseUrl | url }}</p>
+<p>Through absoluteUrl: {{ site.baseUrl | url | absoluteUrl(site.baseUrl) }}</p>
