@@ -63,10 +63,9 @@ collections:
     label: "Art"
     folder: "src/_collections/art"
     slug: "{{slug}}"
+    preview_path: art/{{slug}}
     create: true
     delete: true
-    editor:
-      preview: false
     sortableFields: ["order", "title", "date"]
     fields:
       - {label: "Order", name: "order", widget: "number"}
@@ -82,10 +81,9 @@ collections:
     label: "Sculptures"
     folder: "src/_collections/sculptures"
     slug: "{{slug}}"
+    preview_path: sculpture/{{slug}}
     create: true
     delete: true
-    editor:
-      preview: false
     sortableFields: ["order", "title", "date"]
     fields:
       - {label: "Order", name: "order", widget: "number"}

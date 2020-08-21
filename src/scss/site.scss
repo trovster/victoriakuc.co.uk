@@ -348,6 +348,11 @@ footer {
   min-height: 200px;
   border: 0 solid $primary;
 
+  &--preview {
+    margin: 20px 50px 0 10px;
+    max-width: 600px;
+  }
+
   &.work--for-sale,
   &.work--sold {
     &:after {
@@ -395,6 +400,7 @@ footer {
 
     h3 {
       margin: 5px 0;
+      font-family: $fontAlt;
       color: $primary;
       font-size: 20px;
     }
