@@ -5,7 +5,7 @@ layout: default.njk
 
 <div class="work">
     <div class="work__image">
-        <img src="{{ image | url | absoluteUrl(site.baseUrl) }}" alt="" title="" />
+        <img src="{{ image | url | absoluteUrl(config.baseUrl) }}" alt="" title="" />
     </div>
     <div class="work__detail">
         <p class="work__medium">{{ medium }}</p>
@@ -14,5 +14,5 @@ layout: default.njk
 </div>
 
 <nav class="pagination">
-    <a href="{{ back | url | absoluteUrl(site.baseUrl) }}" class="pagination--prev">Back</a>
+    <a href="{{ back | url | absoluteUrl(config.baseUrl) }}" class="pagination--prev">Back</a>
 </nav>

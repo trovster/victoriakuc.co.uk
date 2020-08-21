@@ -3,19 +3,15 @@ layout: default.njk
 ---
 <div class="boxes">
     <div class="box box--art">
-        <a href="/art/">
-            <img src="{{ art_image | url | absoluteUrl(site.baseUrl) }}" title="" alt="Watercolour of a field with heather" />
+        <a href="{{ '/art/' | url | absoluteUrl(config.baseUrl) }}">
+            <img src="{{ art_image | url | absoluteUrl(config.baseUrl) }}" title="" alt="Watercolour of a field with heather" />
             <h2>{{ art }}</h2>
         </a>
     </div>
     <div class="box box--sculpture">
-        <a href="/sculpture/">
-            <img src="{{ sculpture_image | url | absoluteUrl(site.baseUrl) }}" title="" alt="A clay sculpture of a black and white panda" />
+        <a href="{{ '/sculpture/' | url | absoluteUrl(config.baseUrl) }}">
+            <img src="{{ sculpture_image | url | absoluteUrl(config.baseUrl) }}" title="" alt="A clay sculpture of a black and white panda" />
             <h2>{{ sculpture }}</h2>
         </a>
     </div>
 </div>
-
-<p>Base URL: {{ site.baseUrl }}</p>
-<p>Through URL: {{ site.baseUrl | url }}</p>
-<p>Through absoluteUrl: {{ site.baseUrl | url | absoluteUrl(site.baseUrl) }}</p>

@@ -1,16 +1,16 @@
 <nav role="navigation">
     <ul>
         <li class="home">
-            <a href="/">Home</a>
+            <a href="{{ '/' | url | absoluteUrl(config.baseUrl) }}">Home</a>
         </li>
         <li class="art">
-            <a href="/art">Art</a>
+            <a href="{{ '/art/' | url | absoluteUrl(config.baseUrl) }}">Art</a>
         </li>
         <li class="sculpture">
-            <a href="/sculpture">Sculpture</a>
+            <a href="{{ '/sculpture/' | url | absoluteUrl(config.baseUrl) }}">Sculpture</a>
         </li>
         <li class="about">
-            <a href="/about">About</a>
+            <a href="{{ '/about/' | url | absoluteUrl(config.baseUrl) }}">About</a>
         </li>
     </ul>
 </nav>

@@ -6,7 +6,7 @@
 
         <meta property="og:title" content="{{ site.title }}"/>
         <meta property="og:description" name="description" content="{{ meta.description }}"/>
-        <meta property="og:image" content="{{ "/img/signature.png" | url | absoluteUrl(site.baseUrl) }}"/>
+        <meta property="og:image" content="{{ "/img/signature.png" | url | absoluteUrl(config.baseUrl) }}"/>
         <meta property="og:site_name" content="{{ site.title }}" />
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -25,9 +25,9 @@
             document.getElementsByTagName('html')[0].className += ' js';
         </script>
 
-        <link rel="icon" href="{{ "/favicon.ico" | url | absoluteUrl(site.baseUrl) }}"/>
-        <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | url | absoluteUrl(site.baseUrl) }}"/>
-        <link rel="apple-touch-icon-precomposed" href="{{ "/apple-touch-icon-precomposed.png" | url | absoluteUrl(site.baseUrl) }}"/>
+        <link rel="icon" href="{{ "/favicon.ico" | url | absoluteUrl(config.baseUrl) }}"/>
+        <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | url | absoluteUrl(config.baseUrl) }}"/>
+        <link rel="apple-touch-icon-precomposed" href="{{ "/apple-touch-icon-precomposed.png" | url | absoluteUrl(config.baseUrl) }}"/>
         <link rel="manifest" href="{{ "/site.webmanifest" | url }}"/>
 
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dancing+Script" />
@@ -47,7 +47,7 @@
     <body class="{{ bodyClass }}">
         <header>
             <div class="inner">
-                <h1><a href="{{ "/" | url | absoluteUrl(site.baseUrl) }}">{{ site.title }}</a></h1>
+                <h1><a href="{{ "/" | url | absoluteUrl(config.baseUrl) }}">{{ site.title }}</a></h1>
 
                 {% include "navigation.njk" %}
             </div>

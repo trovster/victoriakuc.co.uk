@@ -3,6 +3,6 @@ layout: default.njk
 ---
 <h2>About the artist</h2>
 
-<img src="{{ avatar | url | absoluteUrl(site.baseUrl) }}" alt="" class="avatar" />
+<img src="{{ avatar | url | absoluteUrl(config.baseUrl) }}" alt="" class="avatar" />
 
 {{ content | safe }}
