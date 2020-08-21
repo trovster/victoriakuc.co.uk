@@ -2,7 +2,7 @@
 layout: about
 title: About Victoria Kuc
 bodyClass: about
-avatar: /img/victoria-kuc.jpg
+avatar: /images/victoria-kuc.jpg
 ---
 Hello, my name is Victoria Kuc and I am an artist living in Staffordshire, UK.
 

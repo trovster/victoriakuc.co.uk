@@ -1,6 +1,6 @@
 site_url: "https://www.victoriakuc.co.uk"
 publish_mode: editorial_workflow
-media_folder: "src/images"
+media_folder: "src/assets/images"
 public_folder: "/images"
 show_preview_links: false
 logo_url: /img/victoria-kuc-vk.gif
@@ -59,7 +59,7 @@ collections:
 
   - name: "art"
     label: "Art"
-    folder: "src/art"
+    folder: "src/_collections/art"
     slug: "art/{{slug}}"
     preview_path: "art/{{slug}}"
     create: true
@@ -67,18 +67,17 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/default.njk"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Medium", name: "medium", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Sold", name: "sold", widget: "boolean"}
-      - {label: "For Sale", name: "for_sale", widget: "boolean"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Sold", name: "sold", widget: "boolean", required: false}
+      - {label: "For Sale", name: "for_sale", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - name: "sculptures"
     label: "Sculptures"
-    folder: "src/sculptures"
+    folder: "src/_collections/sculptures"
     slug: "sculpture/{{slug}}"
     preview_path: "sculpture/{{slug}}"
     create: true
@@ -86,14 +85,13 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Medium", name: "medium", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Sold", name: "sold", widget: "boolean"}
-      - {label: "For Sale", name: "for_sale", widget: "boolean"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Sold", name: "sold", widget: "boolean", required: false}
+      - {label: "For Sale", name: "for_sale", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
 
   - label: "Configuration"
     name: "config"

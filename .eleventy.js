@@ -3,7 +3,6 @@ const absoluteUrl = require('./src/_filters/absoluteUrl')
 const byKey = require('./src/_filters/byKey')
 const bySlug = require('./src/_filters/bySlug')
 const folder = require('./src/_filters/folder')
-const imagePath = require('./src/_filters/imagePath')
 
 module.exports = function (config) {
   config.setTemplateFormats(['md', 'njk', 'jpg'])
@@ -13,6 +12,7 @@ module.exports = function (config) {
   config.addPassthroughCopy({
     'src/admin': 'admin/',
     'src/assets/img': 'img/',
+    'src/assets/images': 'images/',
     'src/assets/apple-touch-icon.png': 'apple-touch-icon.png',
     'src/assets/apple-touch-icon-precomposed.png': 'apple-touch-icon-precomposed.png',
     'src/assets/favicon.ico': 'favicon.ico',
@@ -27,7 +27,6 @@ module.exports = function (config) {
 
   config.addFilter('absoluteUrl', (href, base) => absoluteUrl(href, base))
   config.addFilter('folder', (page) => folder(page))
-  config.addFilter('imagePath', (image, page) => imagePath(image, page))
   config.addFilter('byKey', (collection, key) => byKey(collection, key))
   config.addFilter('bySlug', (collection, slug) => bySlug(collection, slug))
 
