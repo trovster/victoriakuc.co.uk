@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Content Manager</title>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </head>
+    <body>
+        <!-- Include the script that builds the page and powers Netlify CMS -->
+        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+        <script>
+            CMS.registerPreviewStyle("/css/site.css");
+        </script>
+        <script>
+            var ItemPreview = createClass({
+                render: function () {
+                    var entry = this.props.entry;
+                    var title = entry.getIn(['data', 'title']);
+                    var medium = entry.getIn(['data', 'medium']);
+                    var image = entry.getIn(['data', 'image']);
+                    var bg = this.props.getAsset(image);
+
+                    return h('div', {"className": "work work--preview"},
+                        h('div', {"className": "work__image"},
+                            h('img', {src: bg.toString()})
+                        ),
+                        h('div', {"className": "work__detail"},
+                            h('h3', {"className": "work__title"}, title),
+                            h('p', {"className": "work__medium"}, medium),
+                            h('div', {"className": "work__description"}, this.props.widgetFor('body'))
+                        ),
+                    );
+                }
+            });
+
+            CMS.registerPreviewTemplate("art", ItemPreview);
+            CMS.registerPreviewTemplate("sculptures", ItemPreview);
+        </script>
+    </body>
+</html>

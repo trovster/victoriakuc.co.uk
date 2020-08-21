@@ -5,7 +5,7 @@ layout: default.njk
 
 <div class="work">
     <div class="work__image">
-        <img src="{{ image | imagePath(page) | url | absoluteUrl(site.baseUrl) }}" alt="" title="" />
+        <img src="{{ image | url | absoluteUrl(site.baseUrl) }}" alt="" title="" />
     </div>
     <div class="work__detail">
         <p class="work__medium">{{ medium }}</p>

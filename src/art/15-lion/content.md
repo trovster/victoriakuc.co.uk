@@ -1,4 +1,0 @@
----
-title: Lion
-medium: Watercolour
----
