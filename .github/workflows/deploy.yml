@@ -1,6 +1,4 @@
 name: Build and Deploy
-env:
-  GITHUB_URL: https://trovster.github.io/victoriakuc.co.uk/
 on:
   push:
     branches: [ main ]
@@ -18,6 +16,8 @@ jobs:
           npm ci
           npm test
           npm run build
+        env:
+          GITHUB_URL: https://trovster.github.io/victoriakuc.co.uk/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
