@@ -27,7 +27,9 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Art Title", name: "art", widget: "string"}
+          - {label: "Art Image", name: "art_image", widget: "image"}
           - {label: "Sculpture Title", name: "sculpture", widget: "string"}
+          - {label: "Sculpture Image", name: "sculpture_image", widget: "image"}
       - name: "art"
         label: "Art"
         file: "src/art.md"

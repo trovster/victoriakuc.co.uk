@@ -4,13 +4,13 @@ layout: default.njk
 <div class="boxes">
     <div class="box box--art">
         <a href="/art/">
-            <img src="/img/art.jpg" title="" alt="Watercolour of a field with heather" />
+            <img src="{{ art_image | url | absoluteUrl(site.baseUrl) }}" title="" alt="Watercolour of a field with heather" />
             <h2>{{ art }}</h2>
         </a>
     </div>
     <div class="box box--sculpture">
         <a href="/sculpture/">
-            <img src="/img/sculpture.jpg" title="" alt="A clay sculpture of a black and white panda" />
+            <img src="{{ sculpture_image | url | absoluteUrl(site.baseUrl) }}" title="" alt="A clay sculpture of a black and white panda" />
             <h2>{{ sculpture }}</h2>
         </a>
     </div>
