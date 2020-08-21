@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.2.2](https://github.com/trovster/victoriakuc.co.uk/compare/1.2.0...1.2.2) (2020-08-21)
+
+
+### Bug Fixes
+
+* add google analytics code ([1540540](https://github.com/trovster/victoriakuc.co.uk/commit/1540540e9ea1261e301531928eafdf8d80b55271))
+* site config and config baseUrl ([c10e959](https://github.com/trovster/victoriakuc.co.uk/commit/c10e9599cbfc4ee064f98f445d5c75c524d30f02))
 
 ### [1.2.1](https://github.com/trovster/victoriakuc.co.uk/compare/1.2.0...1.2.1) (2020-08-21)
 
