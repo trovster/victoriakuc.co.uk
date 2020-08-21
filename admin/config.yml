@@ -1,0 +1,123 @@
+site_url: "https://www.victoriakuc.co.uk"
+publish_mode: editorial_workflow
+media_folder: "src/assets/images"
+public_folder: "/images"
+show_preview_links: false
+logo_url: /img/victoria-kuc-vk.gif
+
+backend:
+  name: git-gateway
+  branch: master
+
+local_backend:
+  url: http://localhost:8082/api/v1
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - name: "index"
+        label: "Homepage"
+        file: "src/index.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Art Title", name: "art", widget: "string"}
+          - {label: "Art Image", name: "art_image", widget: "image"}
+          - {label: "Sculpture Title", name: "sculpture", widget: "string"}
+          - {label: "Sculpture Image", name: "sculpture_image", widget: "image"}
+      - name: "art"
+        label: "Art"
+        file: "src/art.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Section", name: "section", widget: "string"}
+      - name: "sculpture"
+        label: "Sculpture"
+        file: "src/sculpture.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Section", name: "section", widget: "string"}
+      - name: "about"
+        label: "About"
+        file: "src/about.md"
+        slug: "{{slug}}"
+        create: false
+        delete: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Avatar", name: "avatar", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "art"
+    label: "Art"
+    folder: "src/_collections/art"
+    slug: "{{slug}}"
+    preview_path: art/{{slug}}
+    create: true
+    delete: true
+    sortableFields: ["order", "title", "date"]
+    fields:
+      - {label: "Order", name: "order", widget: "number"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Medium", name: "medium", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Sold", name: "sold", widget: "boolean", required: false}
+      - {label: "For Sale", name: "for_sale", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - name: "sculptures"
+    label: "Sculptures"
+    folder: "src/_collections/sculptures"
+    slug: "{{slug}}"
+    preview_path: sculpture/{{slug}}
+    create: true
+    delete: true
+    sortableFields: ["order", "title", "date"]
+    fields:
+      - {label: "Order", name: "order", widget: "number"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Medium", name: "medium", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Sold", name: "sold", widget: "boolean", required: false}
+      - {label: "For Sale", name: "for_sale", widget: "boolean", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
+  - label: "Configuration"
+    name: "config"
+    editor:
+      preview: false
+    files:
+      # - label: "Site Data"
+      #   name: "site_data"
+      #   file: "src/_data/site.js"
+      #   delete: false
+      #   fields:
+      #     - {label: "Title", name: "title", widget: "string"}
+      #     - {label: "Summary", name: "summary", widget: "string"}
+      #     - {label: "Author", name: "author", widget: "string"}
+      #     - {label: "URL", name: "url", widget: "string"}
+      #     - {label: "Email", name: "email", widget: "string"}
+      #     - {label: "Telephone", name: "telephone", widget: "string"}
+
+      - label: "Social Media"
+        name: "social_media"
+        file: "src/_data/social.json"
+        delete: false
+        fields:
+          - {label: "Facebook", name: "facebook", widget: "string", required: false}
+          - {label: "Twitter", name: "twitter", widget: "string", required: false}
+          - {label: "Instagram", name: "instagram", widget: "string", required: false}
+          - {label: "Etsy", name: "etsy", widget: "string", required: false}
