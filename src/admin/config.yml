@@ -62,8 +62,7 @@ collections:
   - name: "art"
     label: "Art"
     folder: "src/_collections/art"
-    slug: "art/{{slug}}"
-    preview_path: "art/{{slug}}"
+    slug: "{{slug}}"
     create: true
     delete: true
     editor:
@@ -80,8 +79,7 @@ collections:
   - name: "sculptures"
     label: "Sculptures"
     folder: "src/_collections/sculptures"
-    slug: "sculpture/{{slug}}"
-    preview_path: "sculpture/{{slug}}"
+    slug: "{{slug}}"
     create: true
     delete: true
     editor:
