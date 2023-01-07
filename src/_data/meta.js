@@ -9,5 +9,6 @@ module.exports = {
     'artist',
     'animal art',
     'dog sculpture'
-  ].join(', ')
+  ].join(', '),
+  year: new Date().getFullYear()
 }
