@@ -1,6 +1,6 @@
 <div class="work">
     <div class="work__image">
-        <img src="{{ item.data.image | url | absoluteUrl(config.baseUrl) }}" alt="" title="" />
+        <img src="{{ item.data.image | url | absoluteUrl(config.baseUrl) }}" alt="" title="" loading="lazy" />
     </div>
     <div class="work__detail">
         <h3 class="work__title">{{ item.data.title }}</h3>
