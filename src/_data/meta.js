@@ -4,7 +4,7 @@ module.exports = {
     'sculpture',
     'clay',
     'watercolour',
-    'staffordshire',
+    'lincolnshire',
     'sculpture artist',
     'artist',
     'animal art',
