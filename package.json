@@ -5,14 +5,12 @@
   "homepage": "https://www.victoriakuc.co.uk",
   "private": true,
   "scripts": {
-    "start": "npm run serve & npm run development -- --watch",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "serve": "cross-env ELEVENTY_ENV=development npx @11ty/eleventy --incremental --serve",
-    "build": "npm run production && npx @11ty/eleventy",
-    "test": "",
-    "lint": "npm run lint:js",
-    "lint:js": "npx standard  --fix",
+    "start": "npm run serve & npx mix watch",
+    "development": "mix",
+    "production": "mix --production",
+    "serve": "npx @11ty/eleventy --incremental --serve",
+    "build": "mix --production && npx @11ty/eleventy",
+    "lint": "npx standard --fix",
     "release": "standard-version --tag-prefix="
   },
   "repository": {
@@ -25,14 +23,12 @@
     "url": "https://www.trovster.com"
   },
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^2.0",
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "cross-env": "^7.0.2",
-    "husky": "^4.3.0",
-    "laravel-mix": "^5.0.9",
+    "laravel-mix": "^6.0.49",
     "lint-staged": "^9.5.0",
     "sass": "^1.29.0",
     "sass-loader": "^8.0.2",
@@ -44,13 +40,6 @@
     "*.(vue|js)": [
       "npm run lint:js"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test"
-    }
   },
   "standard": {
     "global": []
