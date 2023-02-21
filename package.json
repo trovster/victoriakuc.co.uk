@@ -10,6 +10,7 @@
     "production": "mix --production",
     "serve": "npx @11ty/eleventy --incremental --serve",
     "build": "mix --production && npx @11ty/eleventy",
+    "test": "",
     "lint": "npx standard --fix",
     "release": "standard-version --tag-prefix="
   },
